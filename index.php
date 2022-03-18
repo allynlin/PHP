@@ -1,11 +1,21 @@
 <?php
 
+$stu1='1';
+$stu2='ab';
+$num=$stu1+$stu2;
+$num1=$stu1+5;
+echo "$num";
+echo "<br>";
+echo "$num1";
+
+
+
 //数组
 
-$array = array(1=>"龙涛",1=> "唐频", 1=>"张林", "刘洋");
-var_dump($array);
-echo "<br>";
-print_r($array);
+//$array = array(1=>"龙涛",1=> "唐频", 1=>"张林", "刘洋");
+//var_dump($array);
+//echo "<br>";
+//print_r($array);
 //$txt1 = "学习 PHP";
 //$txt2 = "RUNOOB.COM";
 //$cars = array("Volvo", "BMW", "Toyota");
