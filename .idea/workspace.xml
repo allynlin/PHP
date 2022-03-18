@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43e94841-095e-432d-9aaa-859501148b88" name="变更" comment="2022-03-16">
-      <change afterPath="$PROJECT_DIR$/判断数据类型.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/white-pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/white-pink.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/判断数据类型.php" beforeDir="false" afterPath="$PROJECT_DIR$/判断数据类型.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +54,8 @@
       <workItem from="1647393268556" duration="349000" />
       <workItem from="1647428471687" duration="31000" />
       <workItem from="1647428507404" duration="4302000" />
-      <workItem from="1647433667977" duration="733000" />
+      <workItem from="1647433667977" duration="759000" />
+      <workItem from="1647562847536" duration="395000" />
     </task>
     <task id="LOCAL-00001" summary="2022-03-16">
       <created>1647393440443</created>
@@ -62,7 +64,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647393440443</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2022-03-16">
+      <created>1647434419623</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1647434419623</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

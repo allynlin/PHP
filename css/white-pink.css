@@ -1,13 +1,14 @@
 @media (prefers-color-scheme: light) {
     body {
-        background: url("https://www.onlychen.cn/bing.php");
+        /*background: url("https://www.onlychen.cn/bing.php");*/
+        /*color: black;*/
     }
 
     .white-pink {
         box-shadow: rgba(187, 187, 187, 1) 0 0 20px -1px;
         -webkit-box-shadow: rgba(187, 187, 187, 1) 0 0 20px -1px;
         backdrop-filter: blur(30px);
-        color: white;
+        color: black;
     }
 
     .white-pink .button {

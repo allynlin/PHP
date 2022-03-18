@@ -29,12 +29,13 @@
                 //不要使用isset判断，$_POST数据已经存在，会返回为真
                 if ($_POST["content"]) {
                     $content = $_POST["content"];
+                    $type=gettype($content);
                     if (isset($content)&&is_numeric($content)&&!strpos($content, '.')) {
                         print "<br><div class='white-pink'><p class='text-center'>是整数</p></div>";
                     }else{
                         print "<br><div class='white-pink'><p class='text-center'>不是整数</p></div>";
                     }
-                    print "<br><div class='white-pink'><p class='text-center'>gettype($content)</p></div>";
+                    print "<br><div class='white-pink'><p class='text-center'>$type</p></div>";
                 }
             }
             ?>
