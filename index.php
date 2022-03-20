@@ -7,7 +7,7 @@ $num1=$stu1+5;
 echo "$num";
 echo "<br>";
 echo "$num1";
-
+const PI = 3.14;
 
 
 //数组
