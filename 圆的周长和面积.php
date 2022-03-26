@@ -101,18 +101,20 @@
                     echo $mj > 100 || $zc < 50 ? "及格" : "不及格";
                     echo "</td></tr>";
                     echo "<tr><td>如果不完美，将面积自增，每加1：</td><td>";
-                    if ($mj > 200 && $zc < 100) {
-                        echo $mj;
-                    } else {
-                        echo ++$mj;
-                    }
+//                    if ($mj > 200 && $zc < 100) {
+//                        echo $mj;
+//                    } else {
+//                        echo ++$mj;
+//                    }
+                    echo $mj > 200 && $zc < 100 ? $mj : ++$mj;
                     echo "</td></tr>";
                     echo "<tr><td>如果不完美，将周长自减，每加1：</td><td>";
-                    if ($mj > 200 && $zc < 100) {
-                        echo $mj;
-                    } else {
-                        echo --$zc;
-                    }
+//                    if ($mj > 200 && $zc < 100) {
+//                        echo $mj;
+//                    } else {
+//                        echo --$zc;
+//                    }
+                    echo $mj > 200 && $zc < 100?$mj:--$mj;
                     echo "</td></tr>";
                     echo "</table>";
                 }
