@@ -49,7 +49,7 @@
         <div class="col-md-6">
             <div class="white-pink text-center">
                 <?php
-                echo "<table><caption>";
+                echo "<table>";
                 for ($i = 1; $i <= 9; $i++) {
                     echo "<tr>";
                     for ($j = 1; $j <= $i; $j++) {
@@ -57,7 +57,7 @@
                     }
                     echo "</tr>";
                 }
-                echo "</caption></table>";
+                echo "</table>";
                 ?>
             </div>
         </div>
