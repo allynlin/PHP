@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43e94841-095e-432d-9aaa-859501148b88" name="变更" comment="2022-03-26">
+      <change afterPath="$PROJECT_DIR$/循环.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/圆的周长和面积.php" beforeDir="false" afterPath="$PROJECT_DIR$/圆的周长和面积.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +69,9 @@
       <workItem from="1647772370963" duration="25000" />
       <workItem from="1648048107305" duration="1594000" />
       <workItem from="1648049927577" duration="2292000" />
-      <workItem from="1648297447478" duration="390000" />
+      <workItem from="1648297447478" duration="490000" />
+      <workItem from="1648691046013" duration="4009000" />
+      <workItem from="1648695805897" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="2022-03-16">
       <created>1647393440443</created>
@@ -127,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648297836114</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="2022-03-26">
+      <created>1648297875358</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1648297875358</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
