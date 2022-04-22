@@ -10,8 +10,8 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <form method="post" class="white-pink" style="margin-top: 10px">
+        <div class="col-md-6 white-pink" style="margin-right: 10px">
+            <form method="post">
                 <label>
                     <span>价格：</span>
                     <input type="text" name="price">
@@ -27,11 +27,11 @@
                     </select>
                 </label>
                 <label style="text-align: center">
-                    <input type="submit" value="计算" class="button">
+                    <input type="submit" value="计算" class="btn btn-success btn-block">
                 </label>
             </form>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6 white-pink" style="margin-left: 10px">
             <?php
             //error_reporting(0);
             //屏蔽错误
@@ -58,9 +58,9 @@
                 if ($_POST["price"]){
                     $price_finally = $_POST["price"];
                     $price_discount = $discount_finally * $price_finally;
-                    print "<br><div class='white-pink'><p class='text-center'>商品折扣后价格是：$price_discount 元</p></div>";
+                    echo "<p class='text-center'>商品折扣后价格是：$price_discount 元</p>";
                 }else{
-                    print "<br><div class='white-pink'><p class='text-center' style='color: #ff3838;font-weight: bold;'>请输入商品价格</p></div>";
+                    echo "<p class='text-center' style='color: #ff3838;font-weight: bold;'>请输入商品价格</p>";
                 }
             }
             ?>

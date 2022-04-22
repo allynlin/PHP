@@ -10,18 +10,18 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <form method="post" class="white-pink" style="margin-top: 10px">
+        <div class="col-md-6 white-pink" style="margin-right: 10px;">
+            <form method="post">
                 <label>
                     <span>请输入内容：</span>
                     <input type="text" name="content">
                 </label>
                 <label style="text-align: center">
-                    <input type="submit" value="计算" class="button">
+                    <input type="submit" value="计算" class="btn btn-success btn-block">
                 </label>
             </form>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6 white-pink" style="margin-left: 10px">
             <?php
             //error_reporting(0);
             //屏蔽错误
@@ -31,11 +31,11 @@
                     $content = $_POST["content"];
                     $type=gettype($content);
                     if (isset($content)&&is_numeric($content)&&!strpos($content, '.')) {
-                        print "<br><div class='white-pink'><p class='text-center'>是整数</p></div>";
+                        echo "<br><div class='white-pink'><p class='text-center'>是整数</p></div>";
                     }else{
-                        print "<br><div class='white-pink'><p class='text-center'>不是整数</p></div>";
+                        echo "<br><div class='white-pink'><p class='text-center'>不是整数</p></div>";
                     }
-                    print "<br><div class='white-pink'><p class='text-center'>$type</p></div>";
+                    echo "<br><div class='white-pink'><p class='text-center'>$type</p></div>";
                 }
             }
             ?>

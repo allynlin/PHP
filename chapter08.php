@@ -25,7 +25,7 @@
                     </div>
                 </label>
                 <label class="text-center">
-                    <input class="btn btn-success" type="submit" value="提交">
+                    <input class="btn btn-success btn-block" type="submit" value="提交">
                 </label>
             </form>
         </div>
