@@ -5,7 +5,7 @@
     <link href="css/white-pink.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <meta content="light dark" name="color-scheme">
-    <title>test.php</title>
+    <title>2022-04-22练习作品</title>
 </head>
 <body>
 <div class="container">
