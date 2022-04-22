@@ -60,7 +60,7 @@ echo "<br>";
 echo substr($file, strrpos($file, '.') + 1);
 echo "<br>";
 //通过trim方法获取文件拓展名
-echo trim(substr(strrchr($file, '.'), 1));
+echo trim(strstr($file, '.'), '.');
 echo "<br>";
 
 //假设有一只猴子摘了一堆桃子，当即吃了一半，可是桃子太好吃了，它又多吃了一个，第二天它把第一天剩下的桃子吃了一半，又多吃了一个，就这样到第十天早上它只剩下一个桃子了，问它一共摘了多少个桃子？用递归算法实现。
@@ -69,10 +69,21 @@ function peach($n)
     if ($n == 1) {
         return 1;
     } else {
-        return (peach($n - 1) + 1) * 2;
+        $num=(peach($n - 1) + 1) * 2;
+        echo "第" . $n . "天，摘了" . $num . "个桃子<br>";
+        return $num;
     }
 }
 echo peach(10);
+echo "<br>";
+
+
+$text = 'PHP（外文名:PHP: Hypertext Preprocessor，中文名：“超文本预处理器”）是一种通用开源脚本语言。语法吸收了C语言、Java和Perl的特点，利于学习，使用广泛，主要适用于Web开发领域。PHP 独特的语法混合了C、Java、Perl以及PHP自创的语法。它可以比CGI或者Perl更快速地执行动态网页。用PHP做出的动态页面与其他的编程语言相比，PHP是将程序嵌入到HTML（标准通用标记语言下的一个应用）文档中去执行，执行效率比完全生成HTML标记的CGI要高许多；PHP还可以执行编译后代码，编译可以达到加密和优化代码运行，使代码运行更快。';
+$keyword = "<font style='color:red;font-weight: bold'>语言</font>";
+//将text中的"语言"替换为keyword;
+echo str_replace("语言",$keyword,$text);
+
+
 
 
 ?>
