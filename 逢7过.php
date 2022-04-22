@@ -19,7 +19,7 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-12 white-pink">
+        <div class="col-md-12 white-pink text-center">
             <?php
             for ($i = 1; $i <= 100; $i++) {
                 if ($i % 10 == 7 || $i % 7 == 0) {

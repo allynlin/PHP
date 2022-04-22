@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43e94841-095e-432d-9aaa-859501148b88" name="变更" comment="rename">
+    <list default="true" id="43e94841-095e-432d-9aaa-859501148b88" name="变更" comment="style connect">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter08.php" beforeDir="false" afterPath="$PROJECT_DIR$/chapter08.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/判断数据类型.php" beforeDir="false" afterPath="$PROJECT_DIR$/判断数据类型.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/商品促销.php" beforeDir="false" afterPath="$PROJECT_DIR$/商品促销.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/圆的周长和面积.php" beforeDir="false" afterPath="$PROJECT_DIR$/圆的周长和面积.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/循环.php" beforeDir="false" afterPath="$PROJECT_DIR$/循环.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/打印实心菱形.php" beforeDir="false" afterPath="$PROJECT_DIR$/打印实心菱形.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/转义字符.php" beforeDir="false" afterPath="$PROJECT_DIR$/转义字符.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/white-pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/white-pink.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/逢7过.php" beforeDir="false" afterPath="$PROJECT_DIR$/逢7过.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +97,7 @@
       <workItem from="1650450022699" duration="1131000" />
       <workItem from="1650452781661" duration="2927000" />
       <workItem from="1650586527620" duration="9997000" />
-      <workItem from="1650611915563" duration="5757000" />
+      <workItem from="1650611915563" duration="5833000" />
     </task>
     <task id="LOCAL-00001" summary="2022-03-16">
       <created>1647393440443</created>
@@ -245,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650626599774</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="style connect">
+      <created>1650627673106</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1650627673106</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +277,8 @@
     <MESSAGE value="2022-04-22" />
     <MESSAGE value="2022-04-22 Connect" />
     <MESSAGE value="rename" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename" />
+    <MESSAGE value="style connect" />
+    <option name="LAST_COMMIT_MESSAGE" value="style connect" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
