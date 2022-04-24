@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43e94841-095e-432d-9aaa-859501148b88" name="变更" comment="更改为允许自定义内容">
+      <change afterPath="$PROJECT_DIR$/隐私保护.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/判断数据类型.php" beforeDir="false" afterPath="$PROJECT_DIR$/判断数据类型.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/商品促销.php" beforeDir="false" afterPath="$PROJECT_DIR$/商品促销.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/圆的周长和面积.php" beforeDir="false" afterPath="$PROJECT_DIR$/圆的周长和面积.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/循环.php" beforeDir="false" afterPath="$PROJECT_DIR$/循环.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/转义字符.php" beforeDir="false" afterPath="$PROJECT_DIR$/转义字符.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter08.php" beforeDir="false" afterPath="$PROJECT_DIR$/chapter08.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/white-pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/white-pink.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +103,7 @@
       <workItem from="1650586527620" duration="9997000" />
       <workItem from="1650611915563" duration="5889000" />
       <workItem from="1650627905632" duration="49000" />
-      <workItem from="1650758942628" duration="4379000" />
+      <workItem from="1650758942628" duration="5004000" />
     </task>
     <task id="LOCAL-00001" summary="2022-03-16">
       <created>1647393440443</created>
@@ -282,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650762918175</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="更改为允许自定义内容">
+      <created>1650763366787</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1650763366787</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

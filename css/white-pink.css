@@ -127,7 +127,7 @@ a {
     border-radius: 4px;
 }
 
-.white-pink input[type="text"], .white-pink input[type="file"], .white-pink input[type="date"], .white-pink select , .white-pink input[type="number"]{
+.white-pink input[type="text"], .white-pink input[type="file"], .white-pink input[type="date"], .white-pink select , .white-pink input[type="number"], .white-pink input[type="tel"]{
     width: 60%;
     padding: 3px 0 3px 5px;
     margin-top: 2px;
