@@ -24,8 +24,8 @@
                         <input type="checkbox" name="sty[]" value="font-style:italic">斜体
                     </div>
                 </label>
-                <label class="text-center">
-                    <input class="btn btn-success btn-block" type="submit" value="提交">
+                <label>
+                    <input class="btn btn-success btn-block" type="submit">
                 </label>
             </form>
         </div>
@@ -69,85 +69,160 @@
     </div>
     <div class="row">
         <div class="col-md-6 white-pink" style="margin-right: 10px">
-            <h1>输出两个数字的最小值</h1>
-            <?php
-            function test($a, $b)
-            {
-                //输出两个数字的最小值
-                return min($a, $b);
-            }
-
-            echo test(5, 6);
-            ?>
-        </div>
-        <div class="col-md-6 white-pink" style="margin-left: 10px">
-            <h1>判断是否超过60分</h1>
-            <?php
-            //屏蔽错误信息
-            error_reporting(0);
-            function isPass($num)
-            {
-                if ($num >= 60) {
-                    return pass;
-                } else {
-                    echo "输入不符合规则";
+            <form method="post">
+                <h1>输出两个数字的最小值</h1>
+                <label>
+                    <span>第一个数字：</span>
+                    <input type="number" name="num1">
+                </label>
+                <br>
+                <label>
+                    <span>第二个数字：</span>
+                    <input type="number" name="num2">
+                </label>
+                <label>
+                    <input type="submit" class="btn btn-success btn-block">
+                </label>
+            </form>
+            <div class="text-center">
+                <?php
+                //屏蔽错误信息
+                error_reporting(0);
+                function test($a, $b)
+                {
+                    //输出两个数字的最小值
+                    return min($a, $b);
                 }
-            }
 
-            echo isPass(70);
-            ?>
+                if ($_POST) {
+                    if ($_POST["num1"] && $_POST["num2"]) {
+                        $num1 = $_POST["num1"];
+                        $num2 = $_POST["num2"];
+                        echo "最小值为：" . test($num1, $num2);
+                    }
+                }
+                ?>
+            </div>
+        </div>
+        <div class="col-md-6 white-pink" style="margin-right: 10px">
+            <form method="post">
+                <h1>获取文件拓展名</h1>
+                <label>
+                    <span>文件路径：</span>
+                    <input type="text" name="path">
+                </label>
+                <label>
+                    <input type="submit" class="btn btn-success btn-block">
+                </label>
+            </form>
+            <div class="text-center">
+                <?php
+                $file = __FILE__;
+                echo "当前文件路径：".$file;
+                echo "<br>";
+                //使用explode方法获取文件拓展名
+                if ($_POST["path"]) {
+                    $path = $_POST["path"];
+                    $arr = explode(".", $path);
+                    echo "输入的文件路径中拓展名为：".end($arr);  //end()返回数组的最后一个元素
+                }
+                ?>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="col-md-6 white-pink" style="margin-right: 10px">
-            <h1>字符串函数</h1>
-            <?php
-            $input1 = "hello,world";
-            $input2 = ",helloworld";
-            $input3 = "helloworld";
-            echo "<br>";
-            var_dump(explode(",", $input1));
-            echo "<br>";
-            var_dump(explode(",", $input2));
-            echo "<br>";
-            var_dump(explode(",", $input3));
-            ?>
+            <form method="post">
+                <h1>字符串函数</h1>
+                <label>
+                    <span>字符串：</span>
+                    <input type="text" name="str">
+                </label>
+                <label>
+                    <input type="submit" class="btn btn-success btn-block">
+                </label>
+            </form>
+            <div class="text-center">
+                <?php
+                if ($_POST["str"]) {
+                    $str = $_POST["str"];
+                    var_dump(explode(",", $str));
+                }
+                ?>
+            </div>
         </div>
         <div class="col-md-6 white-pink" style="margin-left: 10px">
-            <h1>字符串函数</h1>
-            <?php
-            $str4 = "abcdef";
-            //截取字符串$str4 截取从字符"c"开始，截取到字符"e"结束
-            echo substr($str4, 2, 3);
-            echo "<br>";
-            $str5 = "abc123abc";
-            //str5中"a"的首次出现的位置
-            echo strpos($str5, "a");
-            echo "<br>";
-            //str5中"a"的最后一次出现的位置
-            echo strrpos($str5, "a");
-            echo "<br>";
-            ?>
+            <form method="post">
+                <h1>判断是否超过60分</h1>
+                <label>
+                    <span>成绩：</span>
+                    <input type="number" name="score">
+                </label>
+                <label>
+                    <input type="submit" class="btn btn-success btn-block">
+                </label>
+            </form>
+            <div class="text-center">
+                <?php
+                //屏蔽错误信息
+                //                error_reporting(0);
+                function isPass($num)
+                {
+                    if ($num >= 60) {
+                        return pass;
+                    } else {
+                        echo "输入不符合规则";
+                    }
+                }
+
+                if ($_POST["score"]) {
+                    $score = $_POST["score"];
+                    echo isPass($score);
+                }
+                ?>
+            </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6 white-pink" style="margin-right: 10px">
-            <h1>获取文件拓展名</h1>
-            <?php
-            $file = __FILE__;
-            echo $file;
-            echo "<br>";
-            //使用explode方法获取文件拓展名
-            $arr = explode('.', $file);
-            echo end($arr);  //end()返回数组的最后一个元素
-            echo "<br>";
-            //通过strpos方法获取文件拓展名
-            echo substr($file, strrpos($file, '.') + 1);
-            echo "<br>";
-            //通过trim方法获取文件拓展名
-            echo trim(strstr($file, '.'), '.');
-            echo "<br>";
-            ?>
+        <div class="col-md-6 white-pink" style="margin-left: 10px">
+            <form method="post">
+                <h1>字符串函数</h1>
+                <label>
+                    <span>字符串：</span>
+                    <input type="text" name="strfunction">
+                </label>
+                <label>
+                    <span>截取开始字符：</span>
+                    <input type="number" name="strstart">
+                </label>
+                <label>
+                    <span>截取字符长度：</span>
+                    <input type="number" name="strlen">
+                </label>
+                <label>
+                    <span>需要截取的字符：</span>
+                    <input type="text" name="character">
+                </label>
+                <label>
+                    <input type="submit" class="btn btn-success btn-block">
+                </label>
+            </form>
+            <div class="text-center">
+                <?php
+                if ($_POST["strfunction"] && $_POST["strstart"] && $_POST["strlen"]) {
+                    $strfunction = $_POST["strfunction"];
+                    $strstart = $_POST["strstart"];
+                    $strlen = $_POST["strlen"];
+                    echo "需要截取的字符串为：".substr("abcdefg", 1, 3);
+                }
+                if ($_POST["strfunction"] && $_POST["character"]) {
+                    $strfunction = $_POST["strfunction"];
+                    $character = $_POST["character"];
+                    echo "字符".$character."首次出现的位置：".strpos($strfunction, $character)."<br>";
+                    echo "字符".$character."最后出现的位置：".strrpos($strfunction, $character);
+                }
+                ?>
+            </div>
         </div>
         <div class="col-md-6 white-pink" style="margin-left: 10px">
             <h1>猴子摘桃</h1>
