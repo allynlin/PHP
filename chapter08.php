@@ -251,7 +251,7 @@
                 }
             }
 
-            echo peach(10);
+            peach(10);
             ?>
         </div>
     </div>
