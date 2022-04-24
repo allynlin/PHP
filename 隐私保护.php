@@ -27,9 +27,9 @@
                 error_reporting(0);
                 if ($_POST['tel']) {
                     $tel = $_POST['tel'];
-                    if (preg_match('/^1[34578]\d{9}$/', $tel)) {
-                        $tel = substr($tel, 0, 3) . '****' . substr($tel, 7);
-                        echo '<p>您的手机号码是：' . $tel . '</p>';
+                    if (preg_match('/^1[34578]\d{9}$/', $tel)) {//正则匹配手机号码
+                        $tel = substr($tel, 0, 3) . '****' . substr($tel, 7);//隐藏手机号码
+                        echo '<p>您的手机号码是：' . $tel . '</p>';//输出手机号码
                     } else {
                         echo '<p>请输入正确的手机号码</p>';
                     }
@@ -52,11 +52,11 @@
                 <?php
                 if ($_POST['sfz']) {
                     $sfz = $_POST['sfz'];
-                    if (preg_match('/^\d{17}[\dx]$/', $sfz)) {
-                        $sfz_low = substr($sfz, 0, 3) . '***********' . substr($sfz, 14);
-                        $sfz_height = substr($sfz, 0, 1) . '****************' . substr($sfz, 17);
-                        echo '<p>低隐私保护身份证号码：' . $sfz_low . '</p>';
-                        echo '<p>高隐私保护身份证号码：' . $sfz_height . '</p>';
+                    if (preg_match('/^\d{17}[\dx]$/', $sfz)) {//正则匹配身份证号码
+                        $sfz_low = substr($sfz, 0, 3) . '***********' . substr($sfz, 14);//隐藏身份证号码
+                        $sfz_height = substr($sfz, 0, 1) . '****************' . substr($sfz, 17);//隐藏身份证号码
+                        echo '<p>低隐私保护身份证号码：' . $sfz_low . '</p>';//输出身份证号码
+                        echo '<p>高隐私保护身份证号码：' . $sfz_height . '</p>';//输出身份证号码
                     } else {
                         echo '<p>请输入正确的身份证号码</p>';
                     }
