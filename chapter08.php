@@ -177,7 +177,7 @@
             <div class="text-center">
                 <?php
                 //屏蔽错误信息
-                //                error_reporting(0);
+                //error_reporting(0);
                 function isPass($num)
                 {
                     if ($num >= 60) {
