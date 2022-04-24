@@ -8,7 +8,7 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-6 white-pink" style="margin-right: 10px;">
+        <div class="col-md-6 white-pink text-center" style="margin-right: 10px;">
             <?php
             echo "\"Why doesn't \"this\" work?\"";
             echo "<br>";
@@ -19,7 +19,7 @@
             echo "\\101BCD";
             ?>
         </div>
-        <div class="col-md-6 white-pink" style="margin-left: 10px;">
+        <div class="col-md-6 white-pink text-center" style="margin-left: 10px;">
             <?php
             echo '"Why doesn\'t "whis" work?" ';
             echo '<br>';

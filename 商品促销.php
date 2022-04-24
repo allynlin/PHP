@@ -31,40 +31,40 @@
                 </label>
             </form>
         </div>
-        <div class="col-md-6 white-pink" style="margin-left: 10px">
-            <?php
-            //error_reporting(0);
-            //屏蔽错误
-            $discount_finally = "";
-            if ($_POST){
-                //不要使用isset判断，$_POST数据已经存在，会返回为真
-                switch ($_POST["discount"]) {
-                    case "九折":
-                        $discount_finally = 0.9;
-                        break;
-                    case "八折":
-                        $discount_finally = 0.8;
-                        break;
-                    case "七折":
-                        $discount_finally = 0.7;
-                        break;
-                    case "六折":
-                        $discount_finally = 0.6;
-                        break;
-                    case "五折":
-                        $discount_finally = 0.5;
-                        break;
-                }
-                if ($_POST["price"]){
-                    $price_finally = $_POST["price"];
-                    $price_discount = $discount_finally * $price_finally;
-                    echo "<p class='text-center'>商品折扣后价格是：$price_discount 元</p>";
-                }else{
-                    echo "<p class='text-center' style='color: #ff3838;font-weight: bold;'>请输入商品价格</p>";
-                }
+        <?php
+        //error_reporting(0);
+        //屏蔽错误
+        $discount_finally = "";
+        if ($_POST) {
+            echo "<div class='col-md-6 white-pink' style='margin-left: 10px'>";
+            //不要使用isset判断，$_POST数据已经存在，会返回为真
+            switch ($_POST["discount"]) {
+                case "九折":
+                    $discount_finally = 0.9;
+                    break;
+                case "八折":
+                    $discount_finally = 0.8;
+                    break;
+                case "七折":
+                    $discount_finally = 0.7;
+                    break;
+                case "六折":
+                    $discount_finally = 0.6;
+                    break;
+                case "五折":
+                    $discount_finally = 0.5;
+                    break;
             }
-            ?>
-        </div>
+            if ($_POST["price"]) {
+                $price_finally = $_POST["price"];
+                $price_discount = $discount_finally * $price_finally;
+                echo "<p class='text-center'>商品折扣后价格是：$price_discount 元</p>";
+            } else {
+                echo "<p class='text-center' style='color: #ff3838;font-weight: bold;'>请输入商品价格</p>";
+            }
+            echo "</div>";
+        }
+        ?>
     </div>
 </div>
 </body>
