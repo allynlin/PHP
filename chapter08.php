@@ -17,15 +17,28 @@
                     <input type="text" name="text">
                 </label>
                 <label>
+                    <span>文字大小：</span>
+                    <input type="number" name="fontsize">
+                </label>
+                <label>
                     <span>索引样式：</span>
                     <div>
                         <input type="checkbox" name="sty[]" value="font-weight:bold">加粗
-                        <input type="checkbox" name="sty[]" value="color:red">标红
                         <input type="checkbox" name="sty[]" value="font-style:italic">斜体
+                        <input type="checkbox" name="sty[]" value="text-decoration:underline">下划线
+                        <input type="checkbox" name="sty[]" value="text-decoration:line-through">删除线
                     </div>
                 </label>
                 <label>
-                    <input class="btn btn-success btn-block" type="submit">
+                    <span>字体颜色：</span>
+                    <input type="color" name="textcolor">
+                </label>
+                <label>
+                    <span>背景颜色：</span>
+                    <input type="color" name="bgcolor" value="#ffffff">
+                </label>
+                <label>
+                    <input class="btn btn-success btn-block" type="submit" value="提交（默认为红色加粗）">
                 </label>
             </form>
         </div>
@@ -47,15 +60,14 @@
                             global $s;
                             $s .= "$sty[$i]" . ";";
                         }
-                        $s .= "'";
-                        $text = $_POST["text"];
-                        $keyword = "<span $s>$text</span>";
+                        $s.="color:$_POST[textcolor];background-color:$_POST[bgcolor];font-size:$_POST[fontsize]px;'";
+                        $text = $_POST["text"];//获取文本
+                        $keyword = "<span $s>$text</span>";//定义一个变量存储更改后的文本
                         //将text中的"语言"替换为keyword;
-                        echo str_replace($text, $keyword, $zw);
+                        echo str_replace($text, $keyword, $zw);//输出更改后的文本
                     } else {
                         $text = $_POST["text"];
-                        $keyword = "<font style='color: red;font-weight: bold'>$text</font>";
-                        //将text中的"语言"替换为keyword;
+                        $keyword = "<span style='color: red;font-weight: bold'>$text</span>";
                         echo str_replace($text, $keyword, $zw);
                     }
                 } else {

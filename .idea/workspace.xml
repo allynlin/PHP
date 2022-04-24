@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43e94841-095e-432d-9aaa-859501148b88" name="变更" comment="style connect">
+    <list default="true" id="43e94841-095e-432d-9aaa-859501148b88" name="变更" comment="更改为允许自定义内容">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter08.php" beforeDir="false" afterPath="$PROJECT_DIR$/chapter08.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/white-pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/white-pink.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +57,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PHP" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PHP" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -100,7 +101,7 @@
       <workItem from="1650586527620" duration="9997000" />
       <workItem from="1650611915563" duration="5889000" />
       <workItem from="1650627905632" duration="49000" />
-      <workItem from="1650758942628" duration="2839000" />
+      <workItem from="1650758942628" duration="3917000" />
     </task>
     <task id="LOCAL-00001" summary="2022-03-16">
       <created>1647393440443</created>
@@ -256,7 +257,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650627751231</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="style connect">
+      <created>1650761831089</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1650761831089</updated>
+    </task>
+    <task id="LOCAL-00024" summary="更改为允许自定义内容">
+      <created>1650761849075</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1650761849075</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +303,8 @@
     <MESSAGE value="2022-04-22 Connect" />
     <MESSAGE value="rename" />
     <MESSAGE value="style connect" />
-    <option name="LAST_COMMIT_MESSAGE" value="style connect" />
+    <MESSAGE value="更改为允许自定义内容" />
+    <option name="LAST_COMMIT_MESSAGE" value="更改为允许自定义内容" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
