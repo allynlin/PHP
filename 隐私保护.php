@@ -5,12 +5,21 @@
     <link href="css/white-pink.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <meta content="light dark" name="color-scheme">
+    <style>
+        .margin-left {
+            margin-left: 10px;
+        }
+
+        .margin-right {
+            margin-right: 10px;
+        }
+    </style>
     <title>隐私保护</title>
 </head>
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-6 white-pink" style="margin-right: 10px">
+        <div class="col-md-6 white-pink margin-right">
             <form method="post">
                 <h1>保护手机号码</h1>
                 <label>
@@ -37,7 +46,7 @@
                 ?>
             </div>
         </div>
-        <div class="col-md-6 white-pink" style="margin-left: 10px">
+        <div class="col-md-6 white-pink margin-left">
             <form method="post">
                 <h1>保护身份证号码</h1>
                 <label>

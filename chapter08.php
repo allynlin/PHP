@@ -5,12 +5,21 @@
     <link href="css/white-pink.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <meta content="light dark" name="color-scheme">
+    <style>
+        .margin-left {
+            margin-left: 10px;
+        }
+
+        .margin-right {
+            margin-right: 10px;
+        }
+    </style>
     <title>2022-04-22练习作品</title>
 </head>
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-6 white-pink" style="margin-right: 10px">
+        <div class="col-md-6 white-pink margin-right">
             <form method="post">
                 <label>
                     <span>索引文字：</span>
@@ -42,7 +51,7 @@
                 </label>
             </form>
         </div>
-        <div class="col-md-6 white-pink" style="margin-left: 10px">
+        <div class="col-md-6 white-pink margin-left">
             <?php
             $zw = 'PHP（外文名:PHP: Hypertext Preprocessor，中文名：“超文本预处理器”）是一种通用开源脚本语言。语法吸收了C语言、Java和Perl的特点，利于学习，使用广泛，主要适用于Web开发领域。PHP 独特的语法混合了C、Java、Perl以及PHP自创的语法。它可以比CGI或者Perl更快速地执行动态网页。用PHP做出的动态页面与其他的编程语言相比，PHP是将程序嵌入到HTML（标准通用标记语言下的一个应用）文档中去执行，执行效率比完全生成HTML标记的CGI要高许多；PHP还可以执行编译后代码，编译可以达到加密和优化代码运行，使代码运行更快。';
             //查看是否提交
@@ -80,7 +89,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6 white-pink" style="margin-right: 10px">
+        <div class="col-md-6 white-pink margin-right">
             <form method="post">
                 <h1>输出两个数字的最小值</h1>
                 <label>
@@ -116,7 +125,7 @@
                 ?>
             </div>
         </div>
-        <div class="col-md-6 white-pink" style="margin-right: 10px">
+        <div class="col-md-6 white-pink margin-left">
             <form method="post">
                 <h1>获取文件拓展名</h1>
                 <label>
@@ -143,7 +152,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6 white-pink" style="margin-right: 10px">
+        <div class="col-md-6 white-pink margin-right">
             <form method="post">
                 <h1>字符串函数</h1>
                 <label>
@@ -163,7 +172,7 @@
                 ?>
             </div>
         </div>
-        <div class="col-md-6 white-pink" style="margin-left: 10px">
+        <div class="col-md-6 white-pink margin-left">
             <form method="post">
                 <h1>判断是否超过60分</h1>
                 <label>
@@ -196,7 +205,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6 white-pink" style="margin-left: 10px">
+        <div class="col-md-6 white-pink margin-left">
             <form method="post">
                 <h1>字符串函数</h1>
                 <label>
@@ -236,7 +245,7 @@
                 ?>
             </div>
         </div>
-        <div class="col-md-6 white-pink" style="margin-left: 10px">
+        <div class="col-md-6 white-pink margin-left">
             <h1>猴子摘桃</h1>
             <?php
             //假设有一只猴子摘了一堆桃子，当即吃了一半，可是桃子太好吃了，它又多吃了一个，第二天它把第一天剩下的桃子吃了一半，又多吃了一个，就这样到第十天早上它只剩下一个桃子了，问它一共摘了多少个桃子？用递归算法实现。

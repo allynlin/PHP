@@ -19,12 +19,20 @@
         tr, td {
             width: 50%;
         }
+
+        .margin-left {
+            margin-left: 10px;
+        }
+
+        .margin-right {
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-6 white-pink" style="margin-right: 10px;">
+        <div class="col-md-6 white-pink margin-right">
             <form method="post">
                 <label>
                     <span>圆的半径：</span>
@@ -40,7 +48,7 @@
         //屏蔽错误信息
         error_reporting(0);
         if ($_POST["bj"]) {
-            echo "<div class='col-md-6 white-pink' style='margin-left: 10px;'>";
+            echo "<div class='col-md-6 white-pink margin-left'";
             define("pi", 3.14);
             $bj = $_POST["bj"];
             $zc = 2 * pi * $bj;

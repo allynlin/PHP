@@ -15,7 +15,7 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-12 white-pink">
+        <div class="col-md-12 white-pink-100">
             <?php
             //利用循环语句，实现在网页中打印用星号“*”组成的实心菱形
             $row = 5; //控制循环的行数

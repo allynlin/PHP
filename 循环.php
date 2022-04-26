@@ -11,12 +11,20 @@
             border: 1px solid black;
             padding: 2px;
         }
+
+        .margin-left {
+            margin-left: 10px;
+        }
+
+        .margin-right {
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-6" style="margin-right: 10px;">
+        <div class="col-md-6 margin-right">
             <div class="col-md-12 white-pink">
                 <h1>案例2-1：计算红白黑球个数</h1>
                 <?php
@@ -45,7 +53,7 @@
                 }
                 ?>
             </div>
-            <div class="col-md-12 white-pink">
+            <div class="col-md-12 white-pink-100">
                 <h1>案例2-3：判断成绩</h1>
                 <form method="post">
                     <label>
@@ -116,7 +124,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 white-pink" style="margin-left: 10px;">
+        <div class="col-md-6 white-pink margin-right">
             <h1>案例2-2：九九乘法表</h1>
             <?php
             echo "<table>";

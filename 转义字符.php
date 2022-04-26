@@ -4,11 +4,20 @@
     <title>转义字符</title>
     <link href="css/white-pink.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <style>
+        .margin-left {
+            margin-left: 10px;
+        }
+
+        .margin-right {
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-6 white-pink text-center" style="margin-right: 10px;">
+        <div class="col-md-6 white-pink text-center margin-right">
             <?php
             echo "\"Why doesn't \"this\" work?\"";
             echo "<br>";
@@ -19,7 +28,7 @@
             echo "\\101BCD";
             ?>
         </div>
-        <div class="col-md-6 white-pink text-center" style="margin-left: 10px;">
+        <div class="col-md-6 white-pink text-center margin-left">
             <?php
             echo '"Why doesn\'t "whis" work?" ';
             echo '<br>';
