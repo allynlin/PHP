@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43e94841-095e-432d-9aaa-859501148b88" name="变更" comment="Connect">
-      <change afterPath="$PROJECT_DIR$/2022-05-04.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter09.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/数组.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2022-05-04.php" beforeDir="false" afterPath="$PROJECT_DIR$/2022-05-04.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +114,7 @@
       <workItem from="1651467577245" duration="276000" />
       <workItem from="1651625203754" duration="70000" />
       <workItem from="1651660073850" duration="34000" />
-      <workItem from="1651664281166" duration="1267000" />
+      <workItem from="1651664281166" duration="3220000" />
     </task>
     <task id="LOCAL-00001" summary="2022-03-16">
       <created>1647393440443</created>
@@ -342,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650957497279</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Connect">
+      <created>1651665570483</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1651665570483</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

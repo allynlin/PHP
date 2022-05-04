@@ -42,7 +42,7 @@
             list($arr["周一"], $arr["周二"], $arr["周三"]) = array("php课", "数据结构", "java课");
             // 用对应的函数获取该数组中所有的键名和值
             foreach ($arr as $key => $value) {
-                echo "数组中键名为".$key."的键值为：$value";
+                echo "数组中键名为" . $key . "的键值为：$value";
                 echo "<br/>";
             }
             echo "<br/>";
