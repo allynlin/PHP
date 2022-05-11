@@ -99,10 +99,51 @@
                 echo "转换后的字符串为:" . change($str);
                 ?>
             </div>
+            <form method="post" class="col-md-12 white-pink">
+                <div class="col-md-12">
+                    <h1>找猴王游戏</h1>
+                    <label>
+                        <span>猴子的总数:</span>
+                        <input type="number" name="n">
+                    </label>
+                    <label>
+                        <span>踢出的猴子:</span>
+                        <input type="number" name="m">
+                    </label>
+                    <label>
+                        <input type="submit" value="计算" class="btn btn-success btn-block">
+                    </label>
+                    <?php
+                    error_reporting(0);
+                    //屏蔽错误
+                    // 一群猴子排成一圈,按"1,2,……,n"依次编号。然后从第1只开始数,数到第m只,把它踢出圈,其后的猴子再从1开始数,数到第m只,把它踢出圈,不停的进行下去,直到最后只剩下一只猴子为止。
+                    // 根据用户输入的m和n,指定猴子的总数n和踢出第m只猴子，最后展示出猴子的总数、猴王编号以及要提出圈的猴子
+                    if ($_POST){
+                        $n = $_POST["n"];
+                        $m = $_POST["m"];
+                        $arr = [];
+                        for ($i = 1; $i <= $n; $i++) {
+                            $arr[] = $i;
+                        }
+                        $count = count($arr);
+                        $i = 0;
+                        while ($count > 1) {
+                            $i++;
+                            if ($i % $m == 0) {
+                                array_shift($arr);
+                            } else {
+                                array_pop($arr);
+                            }
+                            $count = count($arr);
+                        }
+                        echo "猴王编号为:" . $arr[0] . "<br>";
+                        echo "猴王总数为:" . $count . "<br>";
+                        echo "要提出圈的猴子为:" . implode(",", $arr);
+                    }
+                    ?>
+                </div>
+            </form>
         </div>
-    </div>
-    <div class="row">
-
     </div>
 </div>
 </body>

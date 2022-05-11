@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43e94841-095e-432d-9aaa-859501148b88" name="变更" comment="Connect">
-      <change afterPath="$PROJECT_DIR$/2022-05-06.php" afterDir="false" />
+    <list default="true" id="43e94841-095e-432d-9aaa-859501148b88" name="变更" comment="课堂练习">
+      <change afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/制作年历.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2022-05-06.php" beforeDir="false" afterPath="$PROJECT_DIR$/2022-05-06.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +51,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -117,7 +119,11 @@
       <workItem from="1651664281166" duration="3548000" />
       <workItem from="1651796817571" duration="816000" />
       <workItem from="1651801086409" duration="695000" />
-      <workItem from="1651807322504" duration="1208000" />
+      <workItem from="1651807322504" duration="1236000" />
+      <workItem from="1651808706403" duration="730000" />
+      <workItem from="1651833344092" duration="249000" />
+      <workItem from="1652268960063" duration="186000" />
+      <workItem from="1652269163945" duration="3721000" />
     </task>
     <task id="LOCAL-00001" summary="2022-03-16">
       <created>1647393440443</created>
@@ -357,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651667535030</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="课堂练习">
+      <created>1651808552018</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1651808552018</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,7 +405,8 @@
     <MESSAGE value="更改为允许自定义内容" />
     <MESSAGE value="隐私保护" />
     <MESSAGE value="Connect" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connect" />
+    <MESSAGE value="课堂练习" />
+    <option name="LAST_COMMIT_MESSAGE" value="课堂练习" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
