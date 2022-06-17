@@ -5,10 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43e94841-095e-432d-9aaa-859501148b88" name="变更" comment="课堂练习">
-      <change afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/制作年历.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2022-05-13.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2022-05-18.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/addStudent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/alterStu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/delMore.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/delStu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/icon/person-fill.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/images/4fb89b1d-1be4-4919-a40d-b595946530e0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/images/be829897-2d20-481e-94ff-f3eef1653ce9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/js/jquery-3.6.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagement/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/jquery-3.6.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/下载文件.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/将数据库内容展示到页面上.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2022-05-06.php" beforeDir="false" afterPath="$PROJECT_DIR$/2022-05-06.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +32,9 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,6 +50,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="26RjP04r0J5dMVNgJCsDygVFdW2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -43,22 +64,28 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/php/php.exe&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/PHP&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\PHP\css" />
       <recent name="D:\PHP" />
+      <recent name="D:\PHP\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\PHP" />
@@ -123,7 +150,35 @@
       <workItem from="1651808706403" duration="730000" />
       <workItem from="1651833344092" duration="249000" />
       <workItem from="1652268960063" duration="186000" />
-      <workItem from="1652269163945" duration="3721000" />
+      <workItem from="1652269163945" duration="4434000" />
+      <workItem from="1652411901458" duration="185000" />
+      <workItem from="1652873750771" duration="54000" />
+      <workItem from="1652873916557" duration="3766000" />
+      <workItem from="1653010531083" duration="6194000" />
+      <workItem from="1653479779246" duration="24000" />
+      <workItem from="1653479823145" duration="3789000" />
+      <workItem from="1653536143545" duration="1148000" />
+      <workItem from="1653611214294" duration="79000" />
+      <workItem from="1653622560474" duration="1250000" />
+      <workItem from="1653871862799" duration="41000" />
+      <workItem from="1653872209972" duration="88000" />
+      <workItem from="1653872320000" duration="69000" />
+      <workItem from="1653875187137" duration="139000" />
+      <workItem from="1653971667560" duration="62000" />
+      <workItem from="1654687261711" duration="47000" />
+      <workItem from="1654687410502" duration="158000" />
+      <workItem from="1654687679269" duration="21000" />
+      <workItem from="1654687827086" duration="37000" />
+      <workItem from="1654687882818" duration="34000" />
+      <workItem from="1654822734352" duration="1734000" />
+      <workItem from="1654831149735" duration="1499000" />
+      <workItem from="1654950951825" duration="88000" />
+      <workItem from="1654951067792" duration="25000" />
+      <workItem from="1655130933944" duration="253000" />
+      <workItem from="1655131273265" duration="87000" />
+      <workItem from="1655424703967" duration="6917000" />
+      <workItem from="1655431795554" duration="1670000" />
+      <workItem from="1655433985599" duration="136000" />
     </task>
     <task id="LOCAL-00001" summary="2022-03-16">
       <created>1647393440443</created>
@@ -370,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651808552018</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="课堂练习">
+      <created>1652273013043</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1652273013043</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,6 +452,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="2022-03-16" />
     <MESSAGE value="2022-03-18" />
     <MESSAGE value="2022-03-20" />
