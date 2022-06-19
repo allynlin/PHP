@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <title>通过标签查询</title>
+    <style>
+        #toast {
+            display: none;
+            /*    悬浮在屏幕顶端*/
+            position: fixed;
+            top: 10px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            z-index: 1200;
+        }
+
+        tr {
+            text-align: center;
+            width: auto;
+            height: auto;
+        }
+
+        td {
+            text-align: center;
+            width: 100px;
+            height: 20px;
+            line-height: 20px;
+        }
+
+        .bg-drop {
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+        }
+
+        .bg-light-1 {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light-1 bg-drop">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="icon/badge-hd.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            图库管理系统
+            <button type="button" class="btn btn-outline-danger" onclick="logOut()">登出</button>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">首页</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        查找图片
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="findByName.html">按名字查找图片</a></li>
+                        <li><a class="dropdown-item" href="findByTag.html">按标签查找图片</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="findByIntr.html">按图片说明查找图片</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="upfile.html">上传图片</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="delMore.html">删除图片</a>
+                </li>
+            </ul>
+            <form id="findPic" class="d-flex " method="post" role="search"
+                  action="">
+                <select class="form-select" aria-label="Default select example" name="classify" id="classify">
+                    <option value="未分类" selected>未分类</option>
+                    <option value="风景">风景</option>
+                    <option value="人物">人物</option>
+                    <option value="动物">动物</option>
+                </select>
+                <button class="btn btn-outline-success" type="submit" id="search">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container" style="margin-top: 80px">
+    <div class="row" style="margin-top: 20px">
+        <div id="toast">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-auto align-content-center">
+                        <div class="alert alert-success" role="alert" id="toasttext">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="con-zw">
+                <!--                <div class="col">-->
+                <!--                    <div class="card" style="width: 18rem;">-->
+                <!--                        <img src="uploads/{{filename}}" class="card-img-top" alt="...">-->
+                <!--                        <div class="card-body">-->
+                <!--                            <h5 class="card-title">{{picname}}</h5>-->
+                <!--                            <p class="card-text">{{picintro}}</p>-->
+                <!--                            <a href="#" class="card-link">下载图片</a>-->
+                <!--                            <a href="#" class="card-link">查看图片</a>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    function logOut() {
+        window.location.href = "login.html";
+    }
+
+    function download(id) {
+        // 获取到 id 号，发送请求
+        $.ajax({
+            url: "api/download.php",
+            type: "post",
+            dataType: 'json',
+            data: {
+                id: id
+            },
+            success: function (data) {
+                if (data.code == 200) {
+                    console.log(data);
+                    // 在新窗口打开图片
+                    window.open("uploads/" + data.data.filename);
+                } else if (data.code == 400) {
+                    $("#password").val("");
+                    $("#toasttext").removeClass();
+                    $("#toasttext").attr("class", "alert alert-danger");
+                    $("#toasttext").text("查询失败");
+                    $("#toast").fadeIn();
+                    setTimeout(function () {
+                        $("#toast").fadeOut();
+                    }, 2000);
+                } else {
+                    $("#password").val("");
+                    $("#toasttext").removeClass();
+                    $("#toasttext").attr("class", "alert alert-danger");
+                    $("#toasttext").text("未知错误");
+                    $("#toast").fadeIn();
+                    $("#toast").fadeIn();
+                    setTimeout(function () {
+                        $("#toast").fadeOut();
+                    }, 2000);
+                }
+            }
+        });
+    }
+
+    $(function () {
+        // 获取到表单点击事件
+        $("#search").click(function () {
+            event.preventDefault();
+            $.ajax({
+                url: "api/findFileByTag.php",
+                type: "post",
+                dataType: 'json',
+                data: {
+                    classify: $("#classify").val()
+                },
+                success: function (data) {
+                    console.log(data);
+                    if (data.code == 400) {
+                        $("#password").val("");
+                        $("#toasttext").removeClass();
+                        $("#toasttext").attr("class", "alert alert-danger");
+                        $("#toasttext").text("查询失败");
+                        $("#toast").fadeIn();
+                        setTimeout(function () {
+                            $("#toast").fadeOut();
+                        }, 2000);
+                    } else {
+                        // 获取到数据之后，渲染到页面上
+                        let html = "";
+                        for (let i = 0; i < data.data.length; i++) {
+                            html += `
+                    <div class="col">
+                        <div class="card" style="width: 18rem;" id="${data.data[i].id}">
+                            <img src="uploads/${data.data[i].filename}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">${data.data[i].picname}</h5>
+                                <p class="card-text">${data.data[i].picintro}</p>
+                                <button class="btn btn-outline-success" type="button" onclick="download(${data.data[i].id})">全屏看图</button>
+                                <button class="btn btn-outline-warning" type="button" onclick="alte(${data.data[i].id})">修改图片</button>
+                                <button class="btn btn-outline-danger" type="button" onclick="alteInfo(${data.data[i].id})">修改图片信息</button>
+                                <button class="btn btn-danger" type="button" onclick="delById(${data.data[i].id})">删除图片</button>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                        }
+                        $("#con-zw").html(html);
+                    }
+                }
+            });
+        });
+    });
+
+    function alte(id) {
+        // 存储 id 号到 localStorage
+        localStorage.setItem("id", id);
+        // 跳转到修改页面
+        window.location.href = "alterfile.html";
+    }
+
+    function alteInfo(id) {
+        // 存储 id 号到 localStorage
+        localStorage.setItem("id", id);
+        // 跳转到修改页面
+        window.location.href = "alterfileInfo.html";
+    }
+
+    function delById(id) {
+        // 确认是否删除
+        if (confirm("确定删除该图片吗？")) {
+            $.ajax({
+                url: "api/delFileById.php",
+                type: "post",
+                dataType: 'json',
+                data: {
+                    id: id
+                },
+                success: function (data) {
+                    console.log(data);
+                    if (data.code == 200) {
+                        $("#toasttext").removeClass();
+                        $("#toasttext").attr("class", "alert alert-success");
+                        $("#toasttext").text("删除成功");
+                        $("#toast").fadeIn();
+                        setTimeout(function () {
+                            $("#toast").fadeOut();
+                        }, 2000);
+                        find();
+                    } else if (data.code == 400) {
+                        $("#toasttext").removeClass();
+                        $("#toasttext").attr("class", "alert alert-danger");
+                        $("#toasttext").text("删除失败");
+                        $("#toast").fadeIn();
+                        setTimeout(function () {
+                            $("#toast").fadeOut();
+                        }, 2000);
+                    } else {
+                        $("#toasttext").removeClass();
+                        $("#toasttext").attr("class", "alert alert-danger");
+                        $("#toasttext").text("未知错误");
+                        $("#toast").fadeIn();
+                        setTimeout(function () {
+                            $("#toast").fadeOut();
+                        }, 2000);
+                    }
+                }
+            });
+        } else {
+            return;
+        }
+    }
+</script>

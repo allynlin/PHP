@@ -4,26 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43e94841-095e-432d-9aaa-859501148b88" name="变更" comment="课堂练习">
-      <change afterPath="$PROJECT_DIR$/2022-05-13.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2022-05-18.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentManagement/addStudent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentManagement/alterStu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentManagement/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentManagement/delMore.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentManagement/delStu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentManagement/icon/person-fill.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentManagement/images/4fb89b1d-1be4-4919-a40d-b595946530e0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentManagement/images/be829897-2d20-481e-94ff-f3eef1653ce9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentManagement/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentManagement/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentManagement/js/jquery-3.6.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentManagement/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/jquery-3.6.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/下载文件.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/将数据库内容展示到页面上.php" afterDir="false" />
+    <list default="true" id="43e94841-095e-432d-9aaa-859501148b88" name="变更" comment="数据库增删改查">
+      <change afterPath="$PROJECT_DIR$/Pic/alterfile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/alterfileInfo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/api/alterfile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/api/alterfileInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/api/delFileById.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/api/delMore.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/api/download.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/api/findFileByIntr.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/api/findFileByName.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/api/findFileByTag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/api/findFiles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/api/findFilesAll.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/api/getFileInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/api/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/api/upfiles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/delMore.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/findByIntr.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/findByName.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/findByTag.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/icon/badge-hd.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/js/EasyLazyload.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/js/jquery-3.6.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/js/template-web.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/upfile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/uploads/62ac9f6e4f184.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/uploads/62ac9f7d4ce26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/uploads/62ac9f8bdfdaf.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/uploads/62ac9f998dd49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/uploads/62ac9fa8c9b23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/uploads/62ac9fc015b30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/uploads/62ac9fd1f0d6a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/uploads/62ac9fddf247a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/uploads/62ac9feb64e78.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/template-web.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentManagement/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/StudentManagement/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +54,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="FormatOnSaveOptions">
     <option name="myRunOnSave" value="true" />
@@ -65,10 +94,11 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/PHP&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/PHP/Pic/js&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -84,10 +114,15 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\PHP" />
-      <recent name="D:\PHP\css" />
+      <recent name="D:\PHP\Pic\js" />
+      <recent name="D:\PHP\Pic" />
+      <recent name="D:\PHP\Pic\api" />
+      <recent name="D:\PHP\Pic\uploads" />
+      <recent name="D:\PHP\Pic\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PHP\Pic" />
+      <recent name="D:\PHP\Pic\api" />
       <recent name="D:\PHP" />
     </key>
   </component>
@@ -178,7 +213,12 @@
       <workItem from="1655131273265" duration="87000" />
       <workItem from="1655424703967" duration="6917000" />
       <workItem from="1655431795554" duration="1670000" />
-      <workItem from="1655433985599" duration="136000" />
+      <workItem from="1655433985599" duration="6282000" />
+      <workItem from="1655448675699" duration="19810000" />
+      <workItem from="1655481428048" duration="159000" />
+      <workItem from="1655520480619" duration="985000" />
+      <workItem from="1655609694346" duration="404000" />
+      <workItem from="1655641836118" duration="1793000" />
     </task>
     <task id="LOCAL-00001" summary="2022-03-16">
       <created>1647393440443</created>
@@ -432,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652273013043</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="数据库增删改查">
+      <created>1655434137136</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1655434137136</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,7 +516,8 @@
     <MESSAGE value="隐私保护" />
     <MESSAGE value="Connect" />
     <MESSAGE value="课堂练习" />
-    <option name="LAST_COMMIT_MESSAGE" value="课堂练习" />
+    <MESSAGE value="数据库增删改查" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据库增删改查" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -113,30 +113,95 @@
         <div class="col-9 table-responsive" id="tab">
             <table class="table table-striped table-hover" id="Stu">
                 <?php
-                if ($_POST) {
-                    $username = $_POST['username'];
-                    $conn = mysqli_connect("localhost", "root", "123456", "php");
-                    $sql = "select * from student where username like '%$username%'";
-                    $result = $conn->query($sql);
-                    if ($result->num_rows > 0) {
-                        echo "<thead><tr><th>id</th><th>姓名</th><th>年龄</th><th>班级</th><th>操作</th></tr></thead>";
-                        echo "<tbody>";
-                        while ($row = $result->fetch_assoc()) {
-                            echo "<tr id='" . $row['id'] . "'><td>" . $row["id"] . "</td><td>" . $row["username"] . "</td><td>" . $row["age"] . "</td><td>" . $row["userclass"] . "</td><td><button type='button' class='btn btn-outline-danger' onclick='delStu(" . $row["id"] . ")'>删除</button><button type='button' class='btn btn-outline-warning' onclick='alrt(" . $row["id"] . ")'>修改</button></td></tr>";
-                        }
-                        echo "</tbody>";
+                // 屏蔽错误信息
+                error_reporting(0);
+                if ($_GET['username']) {
+                    $username = $_GET['username'];
+                    if ($_POST) {
+                        $username = $_POST['username'];
+                        $pdo = new PDO("mysql:host=localhost;dbname=php", "root", "123456");
+                        $sql = "select * from student where username like '%$username%'";
+                        $data = $pdo->query($sql)->fetchAll();
+                        $num = 5;
+                        $count = count($data);
+                        $w = ceil($count / $num);
+                        $page = 1;
                     } else {
-//                        echo "<h1>没有查询到结果</h1>";
-                        echo "<script>
-                    $('#toasttext').removeClass();
-                    $('#toasttext').attr('class', 'alert alert-danger');
-                    $('#toasttext').text('未查询到匹配的学生');
-                    $('#toast').fadeIn();
-                    setTimeout(function () {
-                        $('#toast').fadeOut();
-                    }, 2000);
-                    </script>";
+                        $username = $_GET['username'];
+                        $pdo = new PDO("mysql:host=localhost;dbname=php", "root", "123456");
+                        $sql = "select * from student where username like '%$username%'";
+                        $data = $pdo->query($sql)->fetchAll();
+                        $num = 5;
+                        $count = count($data);
+                        $w = ceil($count / $num);
+                        $page = $_GET['page'] ?? 1;
                     }
+                } else {
+                    if ($_POST) {
+                        $username = $_POST['username'];
+                        $pdo = new PDO("mysql:host=localhost;dbname=php", "root", "123456");
+                        $sql = "select * from student where username like '%$username%'";
+                        $data = $pdo->query($sql)->fetchAll();
+                        $num = 5;
+                        $count = count($data);
+                        $w = ceil($count / $num);
+                        $page = 1;
+                    } else {
+                        $username = "";
+                        $pdo = new PDO("mysql:host=localhost;dbname=php", "root", "123456");
+                        $sql = "select * from student where username like '%$username%'";
+                        $data = $pdo->query($sql)->fetchAll();
+                        $num = 5;
+                        $count = count($data);
+                        $w = ceil($count / $num);
+                        $page = $_GET['page'] ?? 1;
+                    }
+                }
+                $offset = ($page - 1) * $num;
+                $sql = "select * from student where username like '%$username%' limit $offset,$num";
+                $data = $pdo->query($sql)->fetchAll();
+                $p = ($page == 1) ? 0 : ($page - 1);
+                $n = ($page == $w) ? 0 : ($page + 1);
+                echo "<thead>";
+                echo "<tr>";
+                echo "<th>姓名</th>";
+                echo "<th>年龄</th>";
+                echo "<th>班级</th>";
+                echo "<th>操作</th>";
+                echo "</tr>";
+                echo "</thead>";
+                echo "<tbody>";
+                foreach ($data as $v) {
+                    echo "<tr>";
+                    echo "<td>" . $v['username'] . "</td>";
+                    echo "<td>" . $v['age'] . "</td>";
+                    echo "<td>" . $v['userclass'] . "</td>";
+                    echo "<td>
+                        <button type='button' class='btn btn-outline-primary' onclick='alrt(" . $v['id'] . ")'>修改</button>
+                        <button type='button' class='btn btn-outline-danger' onclick='delStu(" . $v['id'] . ")'>删除</button>
+                    </td>";
+                    echo "</tr>";
+                }
+                if ($page == 1) {
+                    echo "首页";
+                } else {
+                    // 传值的时候同时传输字符串
+                    echo "<a href='?page=1&username=$username'><button type='button'>首页</button></a>";
+                }
+                if ($p) {
+                    echo "<a href='?page={$p}&username=$username'>上一页</a>";
+                } else {
+                    echo "上一页";
+                }
+                if ($n) {
+                    echo "<a href='?page={$n}&username=$username'>下一页</a>";
+                } else {
+                    echo "下一页";
+                }
+                if ($page == $w) {
+                    echo "尾页";
+                } else {
+                    echo "<a href='?page={$w}&username=$username'>尾页</a>";
                 }
                 ?>
             </table>

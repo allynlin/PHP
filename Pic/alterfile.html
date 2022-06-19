@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <title>修改图片</title>
+    <style>
+        #toast {
+            display: none;
+            /*    悬浮在屏幕顶端*/
+            position: fixed;
+            top: 10px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            z-index: 1200;
+        }
+
+        tr {
+            text-align: center;
+            width: auto;
+            height: auto;
+        }
+
+        td {
+            text-align: center;
+            width: 100px;
+            height: 20px;
+            line-height: 20px;
+        }
+
+        .bg-drop {
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+        }
+
+        .bg-light-1 {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light-1 bg-drop">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="icon/badge-hd.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            图库管理系统
+            <button type="button" class="btn btn-outline-danger" onclick="logOut()">登出</button>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">首页</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        查找图片
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="findByName.html">按名字查找图片</a></li>
+                        <li><a class="dropdown-item" href="findByTag.html">按标签查找图片</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="findByIntr.html">按图片说明查找图片</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="upfile.html">上传图片</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="delMore.html">删除图片</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container" style="margin-top: 80px">
+    <div class="row" style="margin-top: 20px">
+        <div id="toast">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-auto align-content-center">
+                        <div class="alert alert-success" role="alert" id="toasttext">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <form action="" method="post" id="upfiles">
+                <div class="mb-3">
+                    <label for="id" class="form-label">ID</label>
+                    <input class="form-control" aria-describedby="idHelp" type="text" name="id" id="id"
+                           readonly>
+                    <div id="idHelp" class="form-text">您的唯一ID号</div>
+                </div>
+                <div class="mb-3" id="userphoto">
+                    <label for="userpic" class="form-label">图片</label>
+                    <input class="form-control" aria-describedby="userpicHelp" type="file" name="userpic" id="userpic"
+                           onchange="previewFile()">
+                    <div id="userpicHelp" class="form-text">上传图片到服务器</div>
+                </div>
+                <!--用于显示上传图片的预览图-->
+                <div class="" id="photo">
+                    <img src="" id="showImg" class="img-thumbnail rounded mx-auto d-block" alt="..."
+                         style="border-radius: 6px;max-width: 200px;">
+                </div>
+                <div class="mb-3">
+                    <label for="picsize" class="form-label">图片大小</label>
+                    <input class="form-control" aria-describedby="picsizeHelp" type="text" name="picsize" id="picsize"
+                           readonly>
+                    <div id="picsizeHelp" class="form-text">选择的图片大小</div>
+                </div>
+                <div class="mb-3">
+                    <label for="picname" class="form-label">图片名称</label>
+                    <input class="form-control" aria-describedby="picnameHelp" type="text" name="picname" id="picname">
+                    <div id="picnameHelp" class="form-text">上传的图片名称</div>
+                </div>
+                <select class="form-select" aria-label="Default select example" name="classify" id="classify">
+                    <option value="未分类" selected>未分类</option>
+                    <option value="风景">风景</option>
+                    <option value="人物">人物</option>
+                    <option value="动物">动物</option>
+                </select>
+                <div class="mb-3">
+                    <label for="picintro" class="form-label">图片说明</label>
+                    <textarea class="form-control" aria-describedby="picintroHelp" name="picintro"
+                              id="picintro"></textarea>
+                    <div id="picintroHelp" class="form-text">图片说明</div>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto" style="margin-top: 10px">
+                    <button type="submit" class="btn btn-outline-danger" id="adph">修改图片</button>
+                    <button type="reset" class="btn btn-outline-secondary">reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    // 页面加载时，获取用户的所有数据
+    $(document).ready(function () {
+        // 从 localStorage 中获取用户的 ID
+        let id = localStorage.getItem("id");
+        // 发送请求，获取用户的所有数据
+        $.ajax({
+            url: "api/getFileInfo.php",
+            type: "post",
+            data: {
+                id: id
+            },
+            dataType: 'json',
+            success: function (res) {
+                console.log(res);
+                console.log(res.data);
+                if (res.code == 200) {
+                    // 将用户的所有数据显示到页面上
+                    $("#id").val(res.data.id);
+                    $("#picsize").val(res.data.picsize);
+                    $("#picname").val(res.data.picname);
+                    $("#picintro").val(res.data.picintro);
+                    $("#classify").val(res.data.classify);
+                    $("#showImg").attr("src", "uploads/" + res.data.filename);
+                } else if (res.code == 400) {
+                    $("#password").val("");
+                    $("#toasttext").removeClass();
+                    $("#toasttext").attr("class", "alert alert-danger");
+                    $("#toasttext").text("获取用户数据失败");
+                    $("#toast").fadeIn();
+                    setTimeout(function () {
+                        $("#toast").fadeOut();
+                    }, 2000);
+                } else {
+                    $("#password").val("");
+                    $("#toasttext").removeClass();
+                    $("#toasttext").attr("class", "alert alert-danger");
+                    $("#toasttext").text("未知错误");
+                    $("#toast").fadeIn();
+                    $("#toast").fadeIn();
+                    setTimeout(function () {
+                        $("#toast").fadeOut();
+                    }, 2000);
+                }
+
+            }
+        });
+    });
+
+    function previewFile() {
+        // 获取显示图片对象
+        let preview = document.getElementById("showImg");   // 通过元素节点查找： document.querySelector('img');
+        // 获取选中图片对象（包含文件的名称、大小、类型等，如file.size）
+        let file = document.getElementById("userpic").files[0];   //document.querySelector('input[type=file]').files[0];
+        // 判断是不是图片类型的文件
+        if (file.type.indexOf("image") == 0) {
+            // 如果是图片类型的文件，那么调用readAsDataURL方法读取文件的内容
+            // 获取图片名称，去除文件名后缀
+            let fileName = file.name;
+            let fileNameNoExt = fileName.substring(0, fileName.lastIndexOf("."));
+            // 获取图片大小，单位为KB
+            let fileSize = file.size;
+            // 如果选择的图片超过5MB，那么提示用户
+            if (fileSize > 5 * 1024 * 1024) {
+                document.getElementById("userpic").value = "";
+                $("#toasttext").removeClass();
+                $("#toasttext").attr("class", "alert alert-danger");
+                $("#toasttext").text("图片大小不能超过5MB");
+                $("#toast").fadeIn();
+                setTimeout(function () {
+                    $("#toast").fadeOut();
+                }, 2000);
+                return;
+            } else {
+                let fileSizeKB = fileSize / 1024;
+                // 将图片名称和图片大小显示在文本框中
+                document.getElementById("picname").value = fileNameNoExt;
+                document.getElementById("picsize").value = fileSizeKB.toFixed(2) + "KB";
+                let reader = new FileReader();
+                if (file) {
+                    // 通过文件流将文件转换成Base64字符串
+                    reader.readAsDataURL(file);
+                    // 转换成功后
+                    reader.onloadend = function () {
+                        // 将转换结果赋值给img标签
+                        preview.src = reader.result;
+                        // 输出结果
+                        // console.log(reader.result);
+                    }
+                    // 将photo标签的display属性设置为block，显示图片
+                    // document.getElementById("photo").style.display = "block";
+                } else {
+                    document.getElementById("userpic").value = "";
+                    $("#toasttext").removeClass();
+                    $("#toasttext").attr("class", "alert alert-danger");
+                    $("#toasttext").text("图片解析失败，请重新选择图片");
+                    $("#toast").fadeIn();
+                    setTimeout(function () {
+                        $("#toast").fadeOut();
+                    }, 2000);
+                }
+            }
+        } else {
+            // 如果不是图片类型的文件，那么提示用户
+            document.getElementById("userpic").value = "";
+            $("#toasttext").removeClass();
+            $("#toasttext").attr("class", "alert alert-danger");
+            $("#toasttext").text("请选择图片类型的文件");
+            $("#toast").fadeIn();
+            setTimeout(function () {
+                $("#toast").fadeOut();
+            }, 2000);
+        }
+    }
+
+    $(function () {
+        // 用Ajax提交表单
+        $("#upfiles").submit(function (e) {
+            e.preventDefault();
+            // 判断是否选择了文件
+            if (document.getElementById("userpic").value == "") {
+                $("#toasttext").removeClass();
+                $("#toasttext").attr("class", "alert alert-danger");
+                $("#toasttext").text("请选择图片");
+                $("#toast").fadeIn();
+                setTimeout(function () {
+                    $("#toast").fadeOut();
+                }, 2000);
+                return;
+            } else {
+                var formData = new FormData(this);
+                $.ajax({
+                    url: "api/alterfile.php",
+                    type: "POST",
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                        let json = JSON.parse(data);
+                        if (json.code == 200) {
+                            $("#upfiles").trigger("reset");
+                            // 清空图片预览，并隐藏
+                            $("#showImg").attr("src", "");
+                            $("#photo").hide();
+                            $("#toasttext").removeClass();
+                            $("#toasttext").attr("class", "alert alert-success");
+                            $("#toasttext").text("修改成功");
+                            $("#toast").fadeIn();
+                            setTimeout(function () {
+                                $("#toast").fadeOut();
+                            }, 2000);
+                        } else if (json.code == 400) {
+                            $("#password").val("");
+                            $("#toasttext").removeClass();
+                            $("#toasttext").attr("class", "alert alert-danger");
+                            $("#toasttext").text("修改失败");
+                            $("#toast").fadeIn();
+                            setTimeout(function () {
+                                $("#toast").fadeOut();
+                            }, 2000);
+                        } else {
+                            $("#password").val("");
+                            $("#toasttext").removeClass();
+                            $("#toasttext").attr("class", "alert alert-danger");
+                            $("#toasttext").text("未知错误");
+                            $("#toast").fadeIn();
+                            $("#toast").fadeIn();
+                            setTimeout(function () {
+                                $("#toast").fadeOut();
+                            }, 2000);
+                        }
+                    }
+                });
+            }
+        });
+    });
+
+    function logOut() {
+        window.location.href = "login.html";
+    }
+</script>
