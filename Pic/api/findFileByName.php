@@ -1,4 +1,13 @@
 <?php
+// 判断用户是否登录
+session_start();
+if (!isset($_SESSION['username'])) {
+    echo json_encode(array(
+        'code' => 600,
+        'msg' => '请先登录'
+    ));
+    exit;
+}
 // 接收前端传来的数据
 $picname = $_POST['picname'];
 // 数据库查询

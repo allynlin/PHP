@@ -1,4 +1,13 @@
 <?php
+// 判断用户是否登录
+session_start();
+if (!isset($_SESSION['username'])) {
+    echo json_encode(array(
+        'code' => 600,
+        'msg' => '请先登录'
+    ));
+    exit;
+}
 // 连接数据库
 $link = mysqli_connect('localhost', 'root', '123456', 'php');
 // 查询 picture 表的所有数据

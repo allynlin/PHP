@@ -5,9 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43e94841-095e-432d-9aaa-859501148b88" name="变更" comment="图库管理系统">
+      <change afterPath="$PROJECT_DIR$/Pic/api/findPageCount.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/api/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/alterfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/alterfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/alterfileInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/alterfileInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/api/alterfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/api/alterfile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/api/alterfileInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/api/alterfileInfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/api/delFileById.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/api/delFileById.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/api/delMore.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/api/delMore.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/api/download.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/api/download.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/api/findFileByIntr.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/api/findFileByIntr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/api/findFileByName.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/api/findFileByName.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/api/findFileByTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/api/findFileByTag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/api/findFiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/api/findFiles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/api/findFilesAll.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/api/findFilesAll.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/api/getFileInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/api/getFileInfo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pic/api/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/api/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/api/upfiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/api/upfiles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/delMore.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/delMore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/findByIntr.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/findByIntr.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/findByName.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/findByName.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/findByTag.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/findByTag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pic/upfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/upfile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,33 +75,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/PHP/Pic/js&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/PHP/Pic/uploads",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PHP\Pic\uploads" />
       <recent name="D:\PHP\Pic\js" />
       <recent name="D:\PHP\Pic" />
       <recent name="D:\PHP\Pic\api" />
-      <recent name="D:\PHP\Pic\uploads" />
       <recent name="D:\PHP\Pic\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -182,7 +204,9 @@
       <workItem from="1655609694346" duration="404000" />
       <workItem from="1655641836118" duration="2450000" />
       <workItem from="1655728584252" duration="974000" />
-      <workItem from="1655857222880" duration="625000" />
+      <workItem from="1655857222880" duration="718000" />
+      <workItem from="1655866627005" duration="610000" />
+      <workItem from="1655897652524" duration="3344000" />
     </task>
     <task id="LOCAL-00001" summary="2022-03-16">
       <created>1647393440443</created>
@@ -450,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655646946430</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="图库管理系统">
+      <created>1655857857786</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1655857857786</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

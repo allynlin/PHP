@@ -1,4 +1,13 @@
 <?php
+// 判断用户是否登录
+session_start();
+if (!isset($_SESSION['username'])) {
+    echo json_encode(array(
+        'code' => 600,
+        'msg' => '请先登录'
+    ));
+    exit;
+}
 // 接收前端上传的文件
 $id = $_POST['id'];
 $file = $_FILES['userpic'];

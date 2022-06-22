@@ -166,7 +166,19 @@
             success: function (res) {
                 console.log(res);
                 console.log(res.data);
-                if (res.code == 200) {
+                if (res.code == 600) {
+                    $("#toasttext").removeClass();
+                    $("#toasttext").attr("class", "alert alert-danger");
+                    $("#toasttext").text("请先登录");
+                    $("#toast").fadeIn();
+                    setTimeout(function () {
+                        $("#toast").fadeOut();
+                    }, 2000);
+                    localStorage.setItem('session', '600');
+                    setTimeout(function () {
+                        window.location.href = "login.html";
+                    }, 3000);
+                } else if (res.code == 200) {
                     // 将用户的所有数据显示到页面上
                     $("#id").val(res.data.id);
                     $("#picsize").val(res.data.picsize);
@@ -289,7 +301,19 @@
                     processData: false,
                     success: function (data) {
                         let json = JSON.parse(data);
-                        if (json.code == 200) {
+                        if (json.code == 600) {
+                            $("#toasttext").removeClass();
+                            $("#toasttext").attr("class", "alert alert-danger");
+                            $("#toasttext").text("请先登录");
+                            $("#toast").fadeIn();
+                            setTimeout(function () {
+                                $("#toast").fadeOut();
+                            }, 2000);
+                            localStorage.setItem('session', '600');
+                            setTimeout(function () {
+                                window.location.href = "login.html";
+                            }, 3000);
+                        } else if (json.code == 200) {
                             $("#upfiles").trigger("reset");
                             // 清空图片预览，并隐藏
                             $("#showImg").attr("src", "");
@@ -328,6 +352,17 @@
     });
 
     function logOut() {
-        window.location.href = "login.html";
+        // 发送ajax请求
+        $.ajax({
+            url: 'api/logout.php',
+            type: 'POST',
+            dataType: 'json',
+            success: function (data) {
+                if (data.code == 200) {
+                    localStorage.setItem('token', '200');
+                    window.location.href = 'login.html';
+                }
+            }
+        });
     }
 </script>
