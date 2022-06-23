@@ -4,32 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43e94841-095e-432d-9aaa-859501148b88" name="变更" comment="图库管理系统-拦截器">
-      <change afterPath="$PROJECT_DIR$/Pic/js/pic_function.js" afterDir="false" />
+    <list default="true" id="43e94841-095e-432d-9aaa-859501148b88" name="变更" comment="图库管理系统-演示模式">
+      <change afterPath="$PROJECT_DIR$/Pic/api/upPass.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/upPassword.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pic/uploads/62b47a2d91001.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pic/alterfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/alterfile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pic/alterfileInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/alterfileInfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pic/api/findFileByIntr.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/api/findFileByIntr.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pic/api/findFileByName.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/api/findFileByName.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pic/api/findFileByTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/api/findFileByTag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pic/api/findFiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/api/findFiles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pic/delMore.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/delMore.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pic/findByIntr.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/findByIntr.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pic/findByName.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/findByName.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pic/findByTag.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/findByTag.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pic/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pic/js/EasyLazyload.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pic/js/template-web.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pic/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pic/upfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pic/upfile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pic/uploads/62ac9f6e4f184.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pic/uploads/62ac9f7d4ce26.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pic/uploads/62ac9f8bdfdaf.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pic/uploads/62ac9f998dd49.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pic/uploads/62ac9fa8c9b23.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pic/uploads/62ac9fc015b30.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pic/uploads/62ac9fd1f0d6a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pic/uploads/62ac9fddf247a.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,32 +63,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/PHP/Pic/uploads&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/PHP/Pic",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PHP\Pic" />
       <recent name="D:\PHP\Pic\uploads" />
       <recent name="D:\PHP\Pic\js" />
-      <recent name="D:\PHP\Pic" />
       <recent name="D:\PHP\Pic\api" />
       <recent name="D:\PHP\Pic\images" />
     </key>
@@ -213,6 +200,8 @@
       <workItem from="1655962852027" duration="315000" />
       <workItem from="1655963525569" duration="1106000" />
       <workItem from="1655979972837" duration="4732000" />
+      <workItem from="1655991131946" duration="66000" />
+      <workItem from="1655993887705" duration="2200000" />
     </task>
     <task id="LOCAL-00001" summary="2022-03-16">
       <created>1647393440443</created>
@@ -494,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655901040844</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="图库管理系统-演示模式">
+      <created>1655991168234</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1655991168234</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +530,8 @@
     <MESSAGE value="数据库增删改查" />
     <MESSAGE value="图库管理系统" />
     <MESSAGE value="图库管理系统-拦截器" />
-    <option name="LAST_COMMIT_MESSAGE" value="图库管理系统-拦截器" />
+    <MESSAGE value="图库管理系统-演示模式" />
+    <option name="LAST_COMMIT_MESSAGE" value="图库管理系统-演示模式" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
