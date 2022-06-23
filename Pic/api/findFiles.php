@@ -10,8 +10,9 @@ if (!isset($_SESSION['username'])) {
 }
 // 连接数据库
 $link = mysqli_connect('localhost', 'root', '123456', 'php');
-// 查询 picture 表的所有数据
-$sql = "select * from php.picture";
+// 查询 picture 表的所有数据，按照 createtime 倒序排列
+$sql = "select * from php.picture order by createtime desc";
+//$sql = "select * from php.picture";
 $result = mysqli_query($link, $sql);
 // 判断查询结果
 if ($result->num_rows > 0) {

@@ -12,8 +12,8 @@ if (!isset($_SESSION['username'])) {
 $classify = $_POST['classify'];
 // 数据库查询
 $link = mysqli_connect('localhost', 'root', '123456', 'php');
-// 模糊查询
-$sql = "select * from php.picture where classify like '%$classify%'";
+// 模糊查询,按照创建时间倒序排列
+$sql = "select * from php.picture where classify like '%$classify%' order by createtime desc";
 $result = mysqli_query($link, $sql);
 // 判断查询结果
 if ($result->num_rows > 0) {

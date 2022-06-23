@@ -13,7 +13,7 @@ $picintro = $_POST['picintro'];
 // 数据库查询
 $link = mysqli_connect('localhost', 'root', '123456', 'php');
 // 模糊查询
-$sql = "select * from php.picture where picintro like '%$picintro%'";
+$sql = "select * from php.picture where picintro like '%$picintro%' order by createtime desc";
 $result = mysqli_query($link, $sql);
 // 判断查询结果
 if ($result->num_rows > 0) {
